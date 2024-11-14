@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cocomat: ["var(--font-cocomat)"],
+        alienor: ["var(--font-alienor)"],
+        inter: ["var(--font-inter)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

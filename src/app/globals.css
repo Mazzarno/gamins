@@ -1,23 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer components {
+  .animate_underline {
+    @apply hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-0.5 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-[#fff4ef] before:absolute before:left-0 before:bottom-0 cursor-pointer;
+  }
+  .text_shadow {
+    @apply [text-shadow:_4px_4px_6px_rgb(0_0_0_/_20%)];
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #fff4ef;
+  --foreground: #c79b92;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
